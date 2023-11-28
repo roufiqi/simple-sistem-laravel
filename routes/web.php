@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('nasabah', [\App\Http\Controllers\NasabahController::class, 'index']);
+Route::get('nasabah/{id}', [\App\Http\Controllers\NasabahController::class, 'detail'])->where('id', '[0-9]+');
+
