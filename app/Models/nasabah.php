@@ -9,4 +9,5 @@ class nasabah extends Model
 {
     use HasFactory;
     protected $table = "nasabah";
+    protected $fillable = ['nomor_identitas', 'nama', 'alamat'];
 }

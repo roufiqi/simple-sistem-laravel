@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NasabahController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('nasabah', [\App\Http\Controllers\NasabahController::class, 'index']);
-Route::get('nasabah/{id}', [\App\Http\Controllers\NasabahController::class, 'detail'])->where('id', '[0-9]+');
+Route::resource('nasabah', NasabahController::class);
+
+//Route::get('/', [\App\Http\Controllers\NasabahController::class, 'index']);
 
